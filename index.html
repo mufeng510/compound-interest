@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定投复利计算器</title>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/echarts/5.3.0-rc.1/echarts.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>定投复利计算器</h1>
+
+    <div>
+        <label for="monthlyAmount">每月存入金额：</label>
+        <input type="number" id="monthlyAmount" placeholder="每月存入金额">
+    </div>
+
+    <div>
+        <label for="annualRate">年化利率（%）：</label>
+        <input type="number" id="annualRate" placeholder="年化利率">
+    </div>
+
+    <div>
+        <label for="years">投资年数：</label>
+        <input type="number" id="years" placeholder="投资年数">
+    </div>
+
+    <button onclick="calculate()">计算</button>
+
+    <h2>定投结果</h2>
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>周期</th>
+                <th>累计存入</th>
+                <th>每期利息</th>
+                <th>累计利息</th>
+                <th>本息合计</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="chart" style="width: 100%; height: 400px;"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
